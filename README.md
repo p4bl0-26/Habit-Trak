@@ -1,26 +1,16 @@
-habit tracker
-Stake-Your-Habit is a decentralized app built for people who need real stakes to stay consistent. Whether you are trying to run every morning, push code daily, or learn a new language, this protocol uses financial accountability to make sure you actually do it.
+# React + Vite
 
-## How it Works
-The idea is simple: put your money where your mouth is.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-1. **The Deposit:** You lock a specific amount of crypto (like ETH or USDC) into our vault smart contract.
-2. **The Commitment:** You choose a habit and a timeframe (e.g., "I will complete a Duolingo lesson every day for 30 days").
-3. **The Verification:** The smart contract doesn't just take your word for it. It uses Chainlink Functions to securely query official Web2 APIs to check your real-world activity.
-4. **The Outcome:** If the oracle verifies you hit your goal, you can withdraw your initial deposit. If you fail, your stake is slashed and sent to a public charity wallet.
+Currently, two official plugins are available:
 
-## Supported Integrations (Oracle Adapters)
-Because the core contract is agnostic, we can plug into almost any public API to verify different habits:
-* Fitness: Strava API (running, cycling, workouts)
-* Learning: Duolingo API (language streaks)
-* Development: GitHub API (daily commits or PRs)
-* Wellness: Oura or Apple HealthKit (sleep scores, daily steps)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Tech Stack
-* Frontend: React.js and Tailwind CSS
-* Web3: Ethers.js / Wagmi 
-* Smart Contracts: Solidity 
-* Off-chain Verification: Chainlink Functions
+## React Compiler
 
-## Current Status
-Right now, this repository contains the frontend prototype. We are currently mocking the wallet connections and the staking flow using React state. The goal here is to completely nail the user interface and user experience before we deploy the actual smart contracts to a testnet.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
