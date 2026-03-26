@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+* {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Animated gradient text */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Glow pulse for badge */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(52, 211, 153, 0.4); }
+  50%       { box-shadow: 0 0 16px rgba(52, 211, 153, 0.8); }
+}
+.glow-badge {
+  animation: glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* Floating particles shimmer */
+@keyframes float-up {
+  0%   { transform: translateY(0px) rotate(0deg); opacity: 0.7; }
+  50%  { transform: translateY(-18px) rotate(180deg); opacity: 0.4; }
+  100% { transform: translateY(0px) rotate(360deg); opacity: 0.7; }
+}
+.particle {
+  animation: float-up ease-in-out infinite;
+}
+
+/* Toast slide-in */
+@keyframes slide-in-right {
+  from { transform: translateX(110%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+.toast-enter {
+  animation: slide-in-right 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Spin loader */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spin {
+  animation: spin 0.7s linear infinite;
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
